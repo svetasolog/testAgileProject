@@ -5,20 +5,28 @@ from resources.constants import MAX_WAIT_INTERVAL, SIGN_ON_BTN_TEXT
 
 class IndexPage(BasePage):
 
-    def wait_and_type_user_name(self, usr_and_pw):
+    def wait_and_type_user_name_and_password(self, usr_and_pw):
         self.explicitly_wait_and_find_element(MAX_WAIT_INTERVAL, IndexPageLocators.USER_ID_TXTBX).send_keys(
             usr_and_pw[0])
-
-    def type_password(self, usr_and_pw):
         self.find_element(IndexPageLocators.PASSWORD_TXTBX).send_keys(
             usr_and_pw[1])
 
+    def click_reset_btn(self):
+        self.find_element(IndexPageLocators.RESET_BUTTON).click()
+
+    def username_and_password_are_reset(self):
+        username_txtbx_text = self.find_element(IndexPageLocators.USER_ID_TXTBX).text
+        password_txtbx_text = self.find_element(IndexPageLocators.PASSWORD_TXTBX).text
+        if username_txtbx_text == '' and password_txtbx_text == '':
+            return True
+        else:
+            return False
     def click_submit_btn(self):
         self.find_element(IndexPageLocators.LOGIN_SUBMIT_BUTTON).click()
 
     def is_logged_out(self):
-        sign_on_btn_text =self.explicitly_wait_and_find_element(MAX_WAIT_INTERVAL,IndexPageLocators.SIGN_ON_BUTTON).text
-        if(sign_on_btn_text==SIGN_ON_BTN_TEXT):
+        sign_on_btn_text = self.explicitly_wait_and_find_element(MAX_WAIT_INTERVAL,IndexPageLocators.SIGN_ON_BUTTON).text
+        if sign_on_btn_text == SIGN_ON_BTN_TEXT:
             return True
         else:
             return False
