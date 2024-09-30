@@ -17,6 +17,3 @@ class BasePage:
     def find_element(self, locator_type_and_locator_tuple):
         return self.driver.find_element(*locator_type_and_locator_tuple)
 
-    #def close_add(self):
-
-

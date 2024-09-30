@@ -7,7 +7,6 @@ from resources.constants import MAX_WAIT_INTERVAL
 #index page
 class LoginSuccessPageLocators(BasePage):
 
-    LOGIN_SUCCESSFUL_LBL = (By.XPATH,"//h3")
-    LOGOUT_BTN = (By.XPATH,"//td[@width='67']/a")
+    LOGIN_SUCCESSFUL_LBL = (By.XPATH, "//ul[@class='menusubnav']/li[3]")
 
 
