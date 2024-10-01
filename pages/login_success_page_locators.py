@@ -3,6 +3,6 @@ from pages.base_page import BasePage
 
 class LoginSuccessPageLocators(BasePage):
 
-    LOGIN_SUCCESSFUL_LBL = (By.XPATH, "//ul[@class='menusubnav']/li[3]")
+    LOGOUT_LINK = (By.XPATH, "//ul[@class='menusubnav']/li[3]")
 
 

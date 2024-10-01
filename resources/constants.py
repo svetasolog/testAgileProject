@@ -4,4 +4,5 @@ LOG_OUT_TEXT ="Log out"
 MINI_STATEMENT_TEXT = "Mini Statement Form"
 ACCOUNT_NO_SELECT_INDEX = 2
 ACCOUNT_NO_RESET_VALUE = "Select Account"
-SIGN_ON_BTN_TEXT = "SIGN-ON"
+LOGIN_BTN_TEXT = "LOGIN"
+LOGOUT_ALERT_MESSAGE = "You Have Succesfully Logged Out!!"

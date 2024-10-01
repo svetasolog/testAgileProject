@@ -3,7 +3,7 @@ import pytest
 
 @pytest.mark.usefixtures("login")
 class TestMiniStatementPage:
-    def test_mini_statement_page_is_shown(self, driver, username_password):
+    def test_mini_statement_page_is_shown(self, driver):
         statement_page = MiniStatementPage(driver)
         statement_page.click_mini_statement_link()
         assert statement_page.is_mini_statement_page(), "Mini statement page is not shown!"
