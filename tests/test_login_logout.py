@@ -1,4 +1,3 @@
-from pages.index_page import IndexPage
 from pages.login_success_page import LoginSuccessPage
 from pages.index_page import IndexPage
 import pytest
